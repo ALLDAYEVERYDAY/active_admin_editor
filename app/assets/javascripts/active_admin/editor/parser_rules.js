@@ -177,9 +177,7 @@
           "dfn": {
               "rename_tag": "span"
           },
-          "iframe": {
-              "remove": 0
-          },
+          "iframe": {},
           "figcaption": {
               "rename_tag": "div"
           },
