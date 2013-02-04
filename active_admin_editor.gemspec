@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Rich text editor for Active Admin using wysihtml5.'
   s.description = s.summary
 
-  s.files = Dir['{app,config,db,lib,vendor}/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.md']
+  s.files = `git ls-files`.split($/)
   s.test_files = Dir['spec/**/*']
 
   s.add_dependency 'rails', '>= 3.0.0'
