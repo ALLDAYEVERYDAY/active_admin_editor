@@ -106,8 +106,19 @@
        *                            - alt:            strips unwanted characters. if the attribute is not set, then it gets set (to ensure valid and compatible HTML)
        *                            - numbers:  ensures that the attribute only contains numeric characters
        */
-      "tags": {
-          "tr": {
+    "tags": {
+        "iframe": {
+          "check_attributes": {
+            "src": "url"
+          },
+          "set_attributes": {
+            "width": "560",
+            "height": "315",
+            "frameborder": "0",
+            "allowfullscreen": ""
+          }
+        },
+        "tr": {
               "add_class": {
                   "align": "align_text"
               }
@@ -116,7 +127,13 @@
               "remove": 1
           },
           "form": {
-              "rename_tag": "div"
+            "check_attributes": {
+              "src": "url", 
+              "action": "url",
+              "id": "alt", 
+              "target": "alt", 
+              "class": "alt"
+            }
           },
           "rt": {
               "rename_tag": "span"
@@ -182,10 +199,8 @@
           },
           "a": {
               "check_attributes": {
-                  "href": "url" // if you compiled master manually then change this from 'url' to 'href'
-              },
-              "set_attributes": {
-                  "target": "_blank"
+                  "href": "url", // if you compiled master manually then change this from 'url' to 'href'
+                  "target": "alt"
               }
           },
           "img": {
@@ -294,7 +309,13 @@
               "remove": 1
           },
           "input": {
-              "remove": 1
+            "check_attributes": {
+              "value": "alt", 
+              "name": "alt", 
+              "type": "alt", 
+              "placeholder": "alt", 
+              "class": "alt"
+            }
           },
           "table": {},
           "keygen": {
