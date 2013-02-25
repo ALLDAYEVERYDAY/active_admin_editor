@@ -314,7 +314,8 @@
               "name": "alt", 
               "type": "alt", 
               "placeholder": "alt", 
-              "class": "alt"
+              "class": "alt", 
+              "pattern":"alt"
             }
           },
           "table": {},
